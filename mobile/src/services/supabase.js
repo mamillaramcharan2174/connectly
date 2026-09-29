@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Supabase Project Credentials
-export const SUPABASE_URL = 'https://pnqfopgpoqzscozygdlg.supabase.co';
-export const SUPABASE_ANON_KEY = 'sb_publishable_OHlY4JsUy7OdnI57Bdhp1Q_QVX2VD0E';
+export const SUPABASE_URL = 'https://ybadkoznqnpnklamhrwr.supabase.co';
+export const SUPABASE_ANON_KEY = 'sb_publishable_imypPKOk40qUBMp1_BTwbA_Z9A4c_7A';
 
 /**
  * Client-side Supabase instance for Connectly Mobile
