@@ -129,7 +129,7 @@ storyExpiryService.start();
 
 const PORT = process.env.PORT || 5000;
 
-if (process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL && !process.env.SERVERLESS) {
   server.listen(PORT, () => {
     console.log(`====================================================`);
     console.log(`🚀 Connectly API Server running on port ${PORT}`);

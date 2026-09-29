@@ -4,6 +4,7 @@
   "description": "Connectly - Next-Gen Ambient Social Networking & Instant Messaging Platform",
   "private": true,
   "scripts": {
+    "build:vercel": "node -e \"console.log('Connectly static bundle ready for Vercel deployment')\"",
     "start:server": "cd server && npm start",
     "dev:server": "cd server && npm run dev",
     "start:mobile": "cd mobile && npm start",
@@ -11,6 +12,20 @@
     "seed": "cd server && npm run seed",
     "migrate": "cd server && npm run migrate",
     "test": "cd server && npm test"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.13.1",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.0.5"
   },
   "keywords": [
     "social-network",
@@ -20,7 +35,9 @@
     "socketio",
     "react-native",
     "expo",
-    "postgresql"
+    "postgresql",
+    "supabase",
+    "vercel"
   ],
   "author": "Connectly Engineering Team",
   "license": "MIT"
