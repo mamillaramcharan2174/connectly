@@ -124,8 +124,10 @@ app.use((req, res) => {
 // Global Error Handler
 app.use(errorHandler);
 
-// Start Story Expiry Cron Worker
-storyExpiryService.start();
+// Start Story Expiry Cron Worker (only in standalone server mode)
+if (!process.env.SERVERLESS && !process.env.VERCEL) {
+  storyExpiryService.start();
+}
 
 const PORT = process.env.PORT || 5000;
 

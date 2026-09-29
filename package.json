@@ -4,6 +4,7 @@
   "description": "Connectly - Next-Gen Ambient Social Networking & Instant Messaging Platform",
   "private": true,
   "scripts": {
+    "build": "node -e \"console.log('Connectly build complete')\"",
     "build:vercel": "node -e \"console.log('Connectly static bundle ready for Vercel deployment')\"",
     "start:server": "cd server && npm start",
     "dev:server": "cd server && npm run dev",

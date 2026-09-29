@@ -1,18 +1,16 @@
 {
   "version": 2,
-  "buildCommand": "npm run build:vercel",
-  "outputDirectory": "public",
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/index.js"
+      "destination": "/api"
     },
     {
       "source": "/uploads/(.*)",
-      "destination": "/api/index.js"
+      "destination": "/api"
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!api|_expo|favicon\\.ico).*)",
       "destination": "/index.html"
     }
   ]
