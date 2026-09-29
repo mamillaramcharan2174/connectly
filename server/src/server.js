@@ -5,7 +5,6 @@ const http = require('http');
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
-const path = require('path');
 const { Server } = require('socket.io');
 
 const errorHandler = require('./middleware/errorHandler');
