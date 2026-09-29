@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Connectly",
+    "slug": "connectly",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0F17"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.connectly.mobile",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Connectly needs camera access to let you capture and share photos and 24-hour stories.",
+        "NSMicrophoneUsageDescription": "Connectly needs microphone access to let you record and send voice messages.",
+        "NSPhotoLibraryUsageDescription": "Connectly needs photo library access to upload photos and videos to your feed and stories."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B0F17"
+      },
+      "package": "app.connectly.mobile",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    }
+  }
+}

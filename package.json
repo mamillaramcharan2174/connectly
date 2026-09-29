@@ -1,0 +1,27 @@
+{
+  "name": "connectly-monorepo",
+  "version": "1.0.0",
+  "description": "Connectly - Next-Gen Ambient Social Networking & Instant Messaging Platform",
+  "private": true,
+  "scripts": {
+    "start:server": "cd server && npm start",
+    "dev:server": "cd server && npm run dev",
+    "start:mobile": "cd mobile && npm start",
+    "start:web": "cd mobile && npx expo start --web",
+    "seed": "cd server && npm run seed",
+    "migrate": "cd server && npm run migrate",
+    "test": "cd server && npm test"
+  },
+  "keywords": [
+    "social-network",
+    "messaging",
+    "stories",
+    "real-time",
+    "socketio",
+    "react-native",
+    "expo",
+    "postgresql"
+  ],
+  "author": "Connectly Engineering Team",
+  "license": "MIT"
+}

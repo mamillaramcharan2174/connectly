@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+server/node_modules/
+mobile/node_modules/
+
+# Environment Variables
+.env
+server/.env
+*.env.local
+
+# Build & Expo Outputs
+mobile/dist/
+mobile/.expo/
+.expo/
+*.tsbuildinfo
+
+# Local Database Files & Cache
+server/data/
+*.db
+*.db.json
+
+# Local Uploads (preserve .gitkeep if any)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
