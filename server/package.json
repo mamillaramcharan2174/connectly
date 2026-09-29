@@ -11,6 +11,7 @@
     "test": "node ../tests/run-tests.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
@@ -22,6 +23,5 @@
     "pg": "^8.13.1",
     "socket.io": "^4.8.1",
     "uuid": "^11.0.5"
-  },
-  "devDependencies": {}
+  }
 }

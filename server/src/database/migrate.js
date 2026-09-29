@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { query } = require('./index');
+const { query, isEmbedded } = require('./index');
 
 async function runMigrations() {
   console.log('[Migration] Starting database migration...');
@@ -12,17 +12,24 @@ async function runMigrations() {
   }
 
   const sql = fs.readFileSync(schemaPath, 'utf8');
-  // Split on semicolons or execute statements
-  const statements = sql
-    .split(/;\s*$/m)
-    .map(s => s.trim())
-    .filter(s => s.length > 0 && !s.startsWith('--'));
 
-  for (const stmt of statements) {
-    try {
-      await query(stmt);
-    } catch (err) {
-      console.warn('[Migration] Note on statement execution:', err.message);
+  if (!isEmbedded()) {
+    console.log('[Migration] Running full DDL migration script on PostgreSQL / Supabase...');
+    await query(sql);
+    console.log('[Migration] All tables and indexes created successfully on Supabase.');
+  } else {
+    const statements = sql
+      .replace(/\r\n/g, '\n')
+      .split(/;\s*$/m)
+      .map(s => s.trim())
+      .filter(s => s.length > 0 && !s.startsWith('--'));
+
+    for (const stmt of statements) {
+      try {
+        await query(stmt);
+      } catch (err) {
+        console.warn('[Migration] Note on statement execution:', err.message);
+      }
     }
   }
 
